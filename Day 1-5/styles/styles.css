@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(37, 37, 37);
+    color: whitesmoke;
+    text-align: center;
+    margin: 50px;
+}
+p {
+    font-family: Gill Sans;
+    text-align: left;
+    color:deepskyblue
+}
+h1 {
+    font-family: Lucida Sans;
+    text-align: left;
+    color: white;
+}
+h2 {
+    font-family: Helvetica;
+    font-size: 24px;
+    text-align: left;
+    color: aliceblue;
+}
+a {
+    color: rgb(162, 32, 32);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#example-id {
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(81, 215, 66);
+}
+#header-2 {
+    font-size: 40px;
+    font-family: Roboto Condensed;
+    color:rgb(214, 217, 9);    
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}

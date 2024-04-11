@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(170, 168, 168);
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 2px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Oswald', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 33px;
+}
+
+p {
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    background-color: rgb(229, 227, 200);
+    color: rgb(243, 98, 8);
+    border-radius: 8px;
+    border: 2px solid rgb(243, 98, 8);
+    padding: 4px;
+}
+
+a:hover {
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+li {
+    list-style: square;
+    font-size: 24px;
+    margin: 12px;
+}
+
+ol {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#important-concepts{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#schedule{
+    font-weight: bold;
+    font-size: 33px;
+    font-family: "Oswald", sans-serif;
+}
+
+#lessons li {
+    font-family: "Oswald";
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0, 1);
+    background-color: rgb(229, 227, 200);
+    color: rgb(243, 98, 8);
+    border: 2px solid;
+    box-shadow: 2px 2px;
+    padding: 2px;
+    border-radius: 8px;
+    margin: 4px 4px;
+}
+
+#lessons h2 {
+    margin: 4px;
+}
+
+#lessons p {
+    margin: 4px;
+}
+
+.goals {
+    background-color: rgb(229, 227, 200);
+    color: rgb(243, 98, 8);
+    border: 2px solid;
+    padding: 2px;
+    background-position: 10px;
+    font-size: 30px;
+    font-family: "Oswald";
+    font-weight: bold;
+}
+
+.important {
+    font-weight: bolder;
+    font-size: 24px;
+    background-color: rgb(229, 227, 200);
+    color: rgb(243, 98, 8);
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 2px;
+    border-radius: 6px;
+    margin: 4px 4px;
+    box-shadow: 3px 3px 3px rgba(18, 18, 18, 0), 1;
+}

@@ -1,0 +1,88 @@
+body {
+    background-color: rgb(244, 234, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 150px;
+    height: 100px;
+}
+
+main {
+    background-color: rgb(122, 74, 218);
+    padding: 10px;
+    margin: 24px auto;
+    width: 700px;
+    border-radius: 7px;
+    color: rgb(240, 240, 255);
+}
+
+
+h1 {
+    font-weight: bolder;
+    font-size: 48px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(88, 49, 196);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding-left: 4px;
+    border-left: 4px solid transparent;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(250, 229, 169);
+    color: rebeccapurple;
+    padding: 2px 4px;
+    border-radius: 6px;
+}
+
+a:hover,
+a:active {
+    background-color: rgb(250, 219, 39);
+}
+
+footer {
+    text-align: center;
+    padding: 2px 8px;
+}
+
+footer p {
+    color: rgb(135, 110, 150);
+    margin-top: 15px;
+}
+
+footer a{
+    background-color: rgba(236, 147, 12, 0.998);
+    display: inline-block;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:active {
+    background-color: rgb(226, 119, 11);
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.important {
+    color: rgb(250, 229, 169);
+    border-color: rgb(240, 200, 80);
+}
