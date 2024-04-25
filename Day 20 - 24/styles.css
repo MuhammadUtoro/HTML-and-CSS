@@ -1,0 +1,46 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: rgb(45, 40, 40);
+}
+
+a {
+    text-decoration: none;
+}
+
+#main-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(30, 25, 25);
+    padding: 0 20px;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(240, 165, 80);
+    text-transform: uppercase;
+}
+
+#main-header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#main-header li {
+    margin: 0 16px;
+
+}
+
+#main-header nav a {
+    color: rgb(185, 130, 30);
+    font-size: 20px;
+}
+
+#main-header nav a:hover {
+    color: rgb(230, 165, 45);
+}
