@@ -44,3 +44,50 @@ a {
 #main-header nav a:hover {
     color: rgb(230, 165, 45);
 }
+
+main h1 {
+    text-align: center;
+    color: rgb(240, 165, 80);
+    font-size: 48px;
+}
+
+#products {
+    width: 80%;
+    margin: 40px auto;
+}
+
+#products ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.food-products {
+    background-color: rgb(230, 205, 180);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.food-products img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.food-products-contents {
+    padding: 16px;
+    text-align: center;
+}
+
+.button {
+    background-color: rgb(230, 160, 45);
+    color: white;
+    border-radius: 6px;
+    padding: 8px 20px;
+}
+
+.button:hover {
+    background-color: rgb(220, 135, 35);
+}
