@@ -3,6 +3,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
 form {
     width: 30rem;
     margin: 3rem auto;
@@ -11,12 +16,20 @@ form {
     border-radius: 6px;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 label {
     margin-bottom: 0.5rem;
     display: block;
 }
 
-input {
+input, 
+textarea, 
+select {
     width: 100%;
     display: block;
     margin-bottom: 1rem;
@@ -27,7 +40,12 @@ input {
     color: rgb(185, 185, 185);
 }
 
-input:focus {
+textarea {
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
     background-color: rgb(220, 190, 255);
     color: rgb(30, 5, 65);
     border-color: rgb(30, 5, 65);

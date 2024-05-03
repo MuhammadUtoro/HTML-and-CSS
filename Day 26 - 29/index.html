@@ -10,32 +10,102 @@
         <title>HTML Forms</title>
     </head>
     <body>
-        <form action="/" method="GET">
-            <label for="username">Your name</label>
-            <input type="text" name="user-name" id="username">
-            <label for="useremail">Your email address</label>
-            <input type="email" name="user-email" id="useremail">
-            <label for="userage">Your age</label>
-            <input type="number" step="1" name="user-age" id="userage">
-            <label for="userpassword">Your password</label>
-            <input type="password" name="user-password" id="userpassword">
-            <label for="birthdate">Your birthdate</label>
-            <input type="date" name="user-date" id="birthdate">
-            <hr>
-            <h2>How should we verify your acount?</h2>
-            <div class="form-control-inline">
-                <input type="radio" name="verify" id="verify-text-message" value="SMS">
-                <label for="verify-text-message">via text message (SMS)</label>
-            </div>
-            <div class="form-control-inline">
-                <input type="radio" name="verify" id="verify-phone" value="phone">
-                <label for="verify-phone">via phone call</label>
-            </div>
-            <div class="form-control-inline">
-                <input type="radio" name="verify" id="verify-email" value="email">
-                <label for="verify-email">via email</label>
-            </div>
-            <button>Submit</button>
-        </form>
+        <header>
+            <h1>Demo Form</h1>
+        </header>
+        <main>
+            <form action="/" method="GET">
+                <section>
+                    <h2>Your personal details</h2>
+                    <ul>
+                        <li>
+                            <label for="username">Your name</label>
+                            <input type="text" name="user-name" id="username" required placeholder="Muhammad Utoro">
+                        </li>
+                        <li>
+                            <label for="useremail">Your email address</label>
+                            <input type="email" name="user-email" id="useremail" required placeholder="your.email@mail.com">
+                        </li>
+                        <li>
+                            <label for="userpassword">Your password</label>
+                            <input type="password" name="user-password" id="userpassword" required minlength="7">
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>More details</h2>
+                    <ul>
+                        <li>
+                            <label for="userage">Your age</label>
+                            <input type="number" step="1" name="user-age" id="userage" required min="18" max="100">
+                        </li>
+                        <li>
+                            <label for="birthdate">Your birthdate</label>
+                            <input type="date" name="user-date" id="birthdate" required min="1921-01-01" max="01-01-2025">
+                        </li>
+                        <li>
+                            <label for="favorite-color">Your favorite color</label>
+                            <select name="favoritecolor" id="favorite-color">
+                                <option value="Blue">Blue</option>
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                            </select>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <label for="usermessage">Your message</label>
+                    <textarea name="user-message" id="usermessage" required rows="5"></textarea>
+                </section>
+
+                <section>
+                    <h2>How should we verify your acount?</h2>
+                    <ul>
+                        <li class="form-control-inline">
+                            <input type="radio" name="verify" id="verify-text-message" value="SMS" required>
+                            <label for="verify-text-message">via text message (SMS)</label>
+                        </li>
+
+                        <li class="form-control-inline">
+                            <input type="radio" name="verify" id="verify-phone" value="phone" required>
+                            <label for="verify-phone">via phone call</label>
+                        </li>
+
+                        <li class="form-control-inline">
+                            <input type="radio" name="verify" id="verify-email" value="email" required>
+                            <label for="verify-email">via email</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>How should we contact you?</h2>
+                    <ul>
+                        <li class="form-control-inline">
+                            <input type="checkbox" name="contact" id="contact-email" value="email">
+                            <label for="contact-email">contact me via email</label>
+                        </li>
+
+                        <li class="form-control-inline">
+                            <input type="checkbox" name="contact" id="contact-phone" value="phone">
+                            <label for="contact-phone">contact me via phone</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="form-control-inline">
+                        <input type="checkbox" name="terms" id="agree-terms">
+                        <label for="agree-terms">Agree to terms?</label>
+                    </div>
+                </section>
+
+                <section>
+                    <button type="submit">Submit</button>
+                </section>
+            </form>
+        </main>
     </body>
 </html>
