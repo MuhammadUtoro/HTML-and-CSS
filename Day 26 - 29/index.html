@@ -4,12 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
         <title>HTML Forms</title>
     </head>
     <body>
         <form action="/" method="GET">
             <label for="username">Your name</label>
-            <input id="username" type="text" name="user-name">
+            <input type="text" name="user-name" id="username">
+            <label for="useremail">Your email address</label>
+            <input type="email" name="user-email" id="useremail">
+            <label for="userage">Your age</label>
+            <input type="number" step="1" name="user-age" id="userage">
+            <label for="userpassword">Your password</label>
+            <input type="password" name="user-password" id="userpassword">
+            <label for="birthdate">Your birthdate</label>
+            <input type="date" name="user-date" id="birthdate">
+            <hr>
+            <h2>How should we verify your acount?</h2>
+            <div class="form-control-inline">
+                <input type="radio" name="verify" id="verify-text-message" value="SMS">
+                <label for="verify-text-message">via text message (SMS)</label>
+            </div>
+            <div class="form-control-inline">
+                <input type="radio" name="verify" id="verify-phone" value="phone">
+                <label for="verify-phone">via phone call</label>
+            </div>
+            <div class="form-control-inline">
+                <input type="radio" name="verify" id="verify-email" value="email">
+                <label for="verify-email">via email</label>
+            </div>
             <button>Submit</button>
         </form>
     </body>
