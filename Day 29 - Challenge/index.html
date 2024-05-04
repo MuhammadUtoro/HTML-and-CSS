@@ -15,62 +15,60 @@
     </header>
     <main>
         <form action="/" method="get">
-            <h2>How can we help you?</h2>
-            <section id="customer-details">
+            <section>
+                <h2>How can we help you?</h2>
                 <ul>
                     <li>
-                        <label for="customername">Your name</label>
+                        <label for="customer-name">Your name</label>
                         <input type="text" name="customername" id="customer-name" required>
                     </li>
 
                     <li>
-                        <label for="customeremail">Your email</label>
+                        <label for="customer-email">Your email</label>
                         <input type="email" name="customeremail" id="customer-email" required>
                     </li>
 
                     <li>
-                        <label for="customerphone">Your phone</label>
-                        <input type="number" name="customerphone" id="customer-phone" required>
+                        <label for="customer-phone">Your phone</label>
+                        <input type="tel" name="customerphone" id="customer-phone" required minlength="5">
+                    </li>
+
+                    <li>
+                        <label for="customer-message">Your message</label>
+                        <textarea name="customermessage" id="customer-message" rows="5" required minlength="5" maxlength="200" rows="6"></textarea>
                     </li>
                 </ul>
             </section>
 
             <section>
+                <label for="findus">How did you find us?</label>
+                    <select name="findus" id="find-us" required>
+                        <option value="web">Web search</option>
+                        <option value="radio">Radio</option>
+                        <option value="friends">Friends</option>
+                    </select>
+            </section>
+
+            <section>
+                <h2>How should we reply?</h2>
                 <ul>
-                    <li>
-                        <label for="customermessage">Your message</label>
-                        <textarea name="customermessage" id="customer-message" rows="5"></textarea>
+                    <li class="form-control-inline">
+                        <input type="radio" name="reply" id="phone-call" value="phone" required>
+                        <label for="phone-call">Call me</label>
                     </li>
 
-                    <li>
-                        <label for="findus">How did you find us?</label>
-                        <select name="findus" id="find-us">
-                            <option value="web">Web search</option>
-                            <option value="radio">Radio</option>
-                            <option value="friends">Friends</option>
-                        </select>
+                    <li class="form-control-inline">
+                        <input type="radio" name="reply" id="via-email" value="email" required>
+                        <label for="via-email">Send me an email</label>
                     </li>
+
+                    <li class="form-control-inline">
+                        <input type="radio" name="reply" id="no-reply" value="no-reply" required>
+                        <label for="no-reply">Do not reply</label>
+                    </li class="form-control-inline">
                 </ul>
             </section>
-                <div id="reply">
-                    <h2>How should we reply?</h2>
-                    <ul>
-                        <li class="form-control-inline">
-                            <input type="checkbox" name="reply" id="phone-call">
-                            <label for="phone-call">Call me</label>
-                        </li>
 
-                        <li class="form-control-inline">
-                            <input type="checkbox" name="reply" id="via-email">
-                            <label for="via-email">Send me an email</label>
-                        </li>
-
-                        <li class="form-control-inline">
-                            <input type="checkbox" name="reply" id="no-reply">
-                            <label for="no-reply">Do not reply</label>
-                        </li class="form-control-inline">
-                    </ul>
-                </div>
             <section>
                 <div class="form-control-inline">
                     <input type="checkbox" name="agreeterms" id="agree-terms">
@@ -78,11 +76,12 @@
                 </div>
             </section>
 
-            <Section>
+            <section id="form-actions">
                 <div id="button"></div>
-                <button type="submit">Submit</button>
-                <button type="reset">Clear</button>
-            </Section>
+                <button id="submit" type="submit">Submit</button>
+                <button id="reset" type="reset">Clear</button>
+            </section>
+
         </form>
     </main>
 </body>

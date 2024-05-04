@@ -1,17 +1,23 @@
 body {
-    background-color: rgb(229, 237, 253);
+    background-color: rgb(244, 252, 255);
     font-family: "Poppins", sans-serif;
 }
 
-header h1{
+h1{
     text-align: center;
+    margin: 1.5remS;
+}
+
+section {
+    margin-bottom: 1rem;
 }
 
 form {
-    background-color: rgb(214, 234, 244);
-    width: 30rem;
-    margin: 2rem auto;
+    background-color: rgb(215, 235, 250);
+    width: 35rem;
+    margin: auto;
     padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     border-radius: 6px;
 }
 
@@ -22,7 +28,8 @@ ul {
 }
 
 label {
-    margin-bottom: 0.3rem;
+    color: rgb(35, 40, 60);
+    margin: 0.5rem 0;
     display: block;
 }
 
@@ -40,20 +47,52 @@ select {
     color: rgb(185, 185, 185);
 }
 
+textarea {
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgb(220, 225, 245);
+}
 
 button {
     display: inline-block;
     font: inherit;
-    background-color: rgb(30, 5, 65);
-    color: white;
-    border: 1px solid rgb(30, 5, 65);
+    border: 1px solid rgb(50, 70, 100);
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
 }
 
+#submit {
+    border: 1px solid rgb(30, 5, 65);
+    background-color: rgb(30, 5, 65);
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(140, 113, 180);
+    color: white;
+    border-color: rgb(140, 113, 180);
+}
+
+#submit:hover {
+    background-color: rgb(140, 113, 180);
+    border-color: rgb(140, 113, 180);
+}
+
+#form-actions {
+    text-align: right;
+}
+
 .form-control-inline {
     display: flex;
+}
+
+.form-control-inline label {
+    margin: 0;
+    margin-left: 0.2rem;
 }
 
 .form-control-inline input {
