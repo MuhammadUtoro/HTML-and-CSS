@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+        <title>Contact Form</title>
+    </head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+        <form action="/" method="get">
+            <h2>How can we help you?</h2>
+            <section id="customer-details">
+                <ul>
+                    <li>
+                        <label for="customername">Your name</label>
+                        <input type="text" name="customername" id="customer-name" required>
+                    </li>
+
+                    <li>
+                        <label for="customeremail">Your email</label>
+                        <input type="email" name="customeremail" id="customer-email" required>
+                    </li>
+
+                    <li>
+                        <label for="customerphone">Your phone</label>
+                        <input type="number" name="customerphone" id="customer-phone" required>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <ul>
+                    <li>
+                        <label for="customermessage">Your message</label>
+                        <textarea name="customermessage" id="customer-message" rows="5"></textarea>
+                    </li>
+
+                    <li>
+                        <label for="findus">How did you find us?</label>
+                        <select name="findus" id="find-us">
+                            <option value="web">Web search</option>
+                            <option value="radio">Radio</option>
+                            <option value="friends">Friends</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+                <div id="reply">
+                    <h2>How should we reply?</h2>
+                    <ul>
+                        <li class="form-control-inline">
+                            <input type="checkbox" name="reply" id="phone-call">
+                            <label for="phone-call">Call me</label>
+                        </li>
+
+                        <li class="form-control-inline">
+                            <input type="checkbox" name="reply" id="via-email">
+                            <label for="via-email">Send me an email</label>
+                        </li>
+
+                        <li class="form-control-inline">
+                            <input type="checkbox" name="reply" id="no-reply">
+                            <label for="no-reply">Do not reply</label>
+                        </li class="form-control-inline">
+                    </ul>
+                </div>
+            <section>
+                <div class="form-control-inline">
+                    <input type="checkbox" name="agreeterms" id="agree-terms">
+                    <label for="agree-terms">Accept Terms</label>
+                </div>
+            </section>
+
+            <Section>
+                <div id="button"></div>
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </Section>
+        </form>
+    </main>
+</body>
+</html>
