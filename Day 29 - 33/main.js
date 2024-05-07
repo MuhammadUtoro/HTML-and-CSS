@@ -10,4 +10,11 @@ let userJobs = {
     salary: 50000
 };
 
-alert('My hobby is ' + myHobbies[0] + ' and my jobs is a ' + userJobs.title);
+let totalAdultYears;
+
+function calculateAdultYears(userAge) {
+    return userAge - 18;
+}
+
+totalAdultYears = calculateAdultYears(myAge);
+alert(totalAdultYears);
