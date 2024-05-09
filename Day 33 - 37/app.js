@@ -10,3 +10,6 @@
 
 let anchorElement = document.getElementById('external-link');
 anchorElement.href = 'https://google.com'
+
+anchorElement = document.querySelector('p a');
+anchorElement.href = 'https://academind.com'
