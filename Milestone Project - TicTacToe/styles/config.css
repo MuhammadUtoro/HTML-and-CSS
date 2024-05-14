@@ -22,6 +22,16 @@
     width: 15rem;
 }
 
+.error input {
+    border-color: rgb(135, 5, 0);
+    color: rgb(135, 5, 0);
+    background-color: rgb(255, 220, 220);
+}
+
+.error label {
+    color: rgb(135, 5, 0);
+}
+
 #game-config {
     width: 90%;
     max-width: 40rem;
