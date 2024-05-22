@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const express = require('express');
 const app = express();
+const uuid = require('uuid');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -22,6 +23,22 @@ app.get('/restaurants', function(request, response) {
 
 });
 
+// Creating Dynamic Route
+app.get('/restaurants/:id', function(request, response) {
+    const restaurantId = request.params.id;
+    const filePath = path.join(__dirname, 'data', 'restaurant.json');
+    const fileData = fs.readFileSync(filePath);
+    const storedRestaurants = JSON.parse(fileData);
+
+    for (const restaurant of storedRestaurants) {
+        if (restaurant.id === restaurantId) {
+            return response.render('restaurant-detail', {restaurant: restaurant});
+        }
+    }
+
+    response.render('404');
+});
+
 app.get('/about', function(request, response) {
     response.render('about');
 });
@@ -32,6 +49,7 @@ app.get('/recommend', function(request, response) {
 
 app.post('/recommend', function(request, response) {
     const restaurant= request.body;
+    restaurant.id = uuid.v4();
     const filePath = path.join(__dirname, 'data', 'restaurant.json');
 
     const fileData = fs.readFileSync(filePath);
@@ -45,6 +63,10 @@ app.post('/recommend', function(request, response) {
 
 app.get('/confirm', function(request, response) {
     response.render('confirm');
+});
+
+app.use(function(request, response) {
+    response.render('404');
 });
 
 app.listen(3000);
