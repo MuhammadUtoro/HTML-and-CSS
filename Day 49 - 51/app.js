@@ -36,7 +36,7 @@ app.get('/restaurants/:id', function(request, response) {
         }
     }
 
-    response.render('404');
+    response.status(404).render('404');
 });
 
 app.get('/about', function(request, response) {
@@ -50,14 +50,10 @@ app.get('/recommend', function(request, response) {
 app.post('/recommend', function(request, response) {
     const restaurant= request.body;
     restaurant.id = uuid.v4();
-    const filePath = path.join(__dirname, 'data', 'restaurant.json');
-
-    const fileData = fs.readFileSync(filePath);
-    const storedRestaurants = JSON.parse(fileData);
-
+    const storedRestaurants = getStoredRestaurant();
     storedRestaurants.push(restaurant);
 
-    fs.writeFileSync(filePath, JSON.stringify(storedRestaurants));
+    storeRestaurants(restaurant);
     response.redirect('/confirm');
 });
 
@@ -66,7 +62,11 @@ app.get('/confirm', function(request, response) {
 });
 
 app.use(function(request, response) {
-    response.render('404');
+    response.status(404).render('404');
+});
+
+app.use(function(error, request, response, next) {
+    response.status(500).render('500');
 });
 
 app.listen(3000);
